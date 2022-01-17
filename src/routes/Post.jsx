@@ -18,8 +18,10 @@ const Post = () => {
 
     return (
         <div className="card d-flex w-50 mt-3 m-auto justify-content-between">
+            <div className="container card-img-top bg-dark">
+                <h1 className="card-title text-warning p-4">{id} - {title}</h1>
+            </div>
             <div className="card-body">
-                <h1 className="card-title">{id} - {title}</h1>
                 <h5 className="card-text">{body}</h5>
             </div>
         </div>
