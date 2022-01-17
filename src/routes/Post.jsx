@@ -13,7 +13,7 @@ const Post = () => {
     }
 
     if(!id) {
-        return <NoEncontrada />
+        return error || <NoEncontrada />
     }
 
     return (

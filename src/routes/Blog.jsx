@@ -25,6 +25,8 @@ const Blog = () => {
         return <h2>Error</h2>
     }
 
+
+
     return (
         <div className="container">
             <h1>Blog</h1>
@@ -39,13 +41,15 @@ const Blog = () => {
                 data.filter(item => {
                     let filter = searchParams.get('filter')
                     if (!filter) return true;
-
+            
                     let title = item.title.toLowerCase()
                     return title.startsWith(filter.toLowerCase())
                     
                 }).map(item => (
                     <h4 key={item.id}>
-                        <Link to={`/blog/${item.id}`}>{item.id} - {item.title}</Link>
+                        <Link to={`/blog/${item.id}`}>
+                            {item.id} - {item.title}
+                        </Link>
                     </h4>
                 ))
             }
