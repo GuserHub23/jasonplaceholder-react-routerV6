@@ -17,9 +17,11 @@ const Post = () => {
     }
 
     return (
-        <div>
-            <h1>{id} - {title}</h1>
-            <h2>{body}</h2>
+        <div className="card d-flex w-50 mt-3 m-auto justify-content-between">
+            <div className="card-body">
+                <h1 className="card-title">{id} - {title}</h1>
+                <h5 className="card-text">{body}</h5>
+            </div>
         </div>
     )
 }
